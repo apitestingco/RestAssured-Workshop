@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestingSumo GitHub Repo API Automation">
+  <test thread-count="1" name="Test">
+    <classes>
+      <class name="tests.GetRepoTest"/>
+      <class name="tests.PostCreateRepo"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
