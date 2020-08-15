@@ -1,7 +1,7 @@
-### Rest Assure Custom API Automation Framework.
+### Custom API Automation Framework. (Rest Assured)
 
 
-Project Stucture
+### Project Stucture
 ![](https://i.imgur.com/d3gtMxg.png)
 
 ## How to run the Project?
