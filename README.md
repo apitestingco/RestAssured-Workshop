@@ -12,5 +12,6 @@ Project Stucture
 
 
 #### Credits
-TestingSumo
-Pramod & Chandan
+From TestingSumo
+- Pramod @ [TheTestingAcademy.com/](https://www.thetestingacademy.com)
+- & Chandan [TestingAutomasi.com/](https://www.testingAutomasi.com/)
