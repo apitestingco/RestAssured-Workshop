@@ -12,6 +12,5 @@
 
 
 #### Credits
-From TestingSumo
 - Pramod @ [TheTestingAcademy.com/](https://www.thetestingacademy.com)
-- & Chandan [TestAutomasi.com/](https://www.testAutomasi.com/)
+- 
