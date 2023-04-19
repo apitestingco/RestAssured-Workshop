@@ -1,26 +1,48 @@
-pipeline {
-    agent any
+pipeline{
 
-    stages {
-        stage('First') {
-            steps {
-                echo "This is 1st stage"
-            }
-        }
-        stage('Second') {
-            steps {
-                echo "This is 2nd stage"
-            }
-        }
-        stage('Third') {
-            steps {
-                echo "This is 3rd stage"
-            }
-        }
-        stage('Fourth') {
-            steps {
-                echo "This is 4th stage"
-            }
-        }
-    }
+	agent any
+
+	environment {
+		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+	}
+
+	stages {
+	    
+	    stage('gitclone') {
+
+			steps {
+				git 'https://github.com/shazforiot/nodeapp_test.git'
+			}
+		}
+
+		stage('Build') {
+
+			steps {
+			bat script:'docker build -t priyalava/nodeapp_test:latest .'
+			}
+		}
+
+		stage('Login') {
+
+			steps {
+			bat script:'docker login -u priyalava -p Nandini@1234'
+
+			}
+		}
+
+		stage('Push') {
+
+			steps {
+			bat script:'docker push priyalava/nodeapp_test:latest'
+			}
+		}
+	}
+
+	post {
+		always {
+		bat script:'docker logout'
+		}
+	}
+
 }
+
